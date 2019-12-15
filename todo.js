@@ -24,14 +24,14 @@ function saveTodos() {
 function paintToDo(text) {
   const li = document.createElement("li");
   const delBtn = document.createElement("span");
-  delBtn.innerText = "❌";
+  delBtn.innerText = "  ❌";
   delBtn.classList.add("btn");
   delBtn.addEventListener("click", deleteTodo);
   const todo = document.createElement("span");
   const newId = todos.length + 1;
   todo.innerText = text;
-  li.appendChild(delBtn);
   li.appendChild(todo);
+  li.appendChild(delBtn);
   li.id = newId;
   todoList.appendChild(li);
   const todoObj = {
